@@ -14,9 +14,9 @@ Caching is a key aspect in reaching optimal performance both from a server and b
 
 *   Ensure all static assets have cache busters in the form of either a version or fingerprint in the filename or unique query string in the URL. This needs to be implemented along with a cache-control header max-age of at least 1 month but optimally 1 year.
 *   A CDN is highly recommended, most popular CDN’s may offer page caching, browser caching and image optimizations.
-*   [Page caching](https://FutureLab.github.io/Engineering-Best-Practices/php/#page-caching) should be set up, a lot of common hosting companies including WP Engine and WordPress VIP offer full page caching.
-*   [Object caching](https://FutureLab.github.io/Engineering-Best-Practices/php/#the-object-cache) should be leveraged where applicable on the server.
-*   All projects should have a [manifest file](https://web.dev/add-manifest/) to download static assets that will be rarely updated. The [manifest.json is included in FutureLabs WP Scaffold](https://github.com/FutureLab/wp-scaffold/blob/trunk/themes/FutureLab-theme/manifest.json) and will require custom configuration.
+*   [Page caching](https://FutureLab.github.io/engineering-best-practices/php/#page-caching) should be set up, a lot of common hosting companies including WP Engine and WordPress VIP offer full page caching.
+*   [Object caching](https://FutureLab.github.io/engineering-best-practices/php/#the-object-cache) should be leveraged where applicable on the server.
+*   All projects should have a [manifest file](https://web.dev/add-manifest/) to download static assets that will be rarely updated. The [manifest.json is included in FutureLabs WP Scaffold](https://github.com/futurelabnz/wp-scaffold/blob/trunk/themes/FutureLab-theme/manifest.json) and will require custom configuration.
 
 ### Images and Media
 
@@ -66,7 +66,7 @@ As part of design reviews, engineering teams should provide feedback on the foll
 *   Use HTTP/2 enabled hosting whenever possible.
 *   GZIP compression should be active.
 
-[Read more on the FutureLab systems performance best practices.](https://FutureLab.github.io/Engineering-Best-Practices/systems/#performance)
+[Read more on the FutureLab systems performance best practices.](https://FutureLab.github.io/engineering-best-practices/systems/#performance)
 
 ### Third Party Plugins and Scripts
 
@@ -134,7 +134,7 @@ Here are some high-level guidelines for ensuring Largest Contentful Paint occurs
 * Ensure that there is a well-thought out caching strategy in place.
 * Use `<link rel="preconnect">` and `<link rel="dns-prefetch">` for assets that originate at third-party domains.
 * Ensure that scripts and styles are carefully audited to ensure that there are no render-blocking patterns in order to improve First Contentful Paint, which will consequently improve Largest Contentful Paint.
-* Ensure that your CSS bundles are minified (see [Task Runners](https://FutureLab.github.io/Engineering-Best-Practices/tools/#task-runners)) and deferred if the CSS rules do not apply above the fold. You can also use Chrome's "Coverage" tab to identify just how much of your CSS bundle is being utilized on the page.
+* Ensure that your CSS bundles are minified (see [Task Runners](https://FutureLab.github.io/engineering-best-practices/tools/#task-runners)) and deferred if the CSS rules do not apply above the fold. You can also use Chrome's "Coverage" tab to identify just how much of your CSS bundle is being utilized on the page.
 * Ensure that your JS bundles are minified, compressed and if the functionality is not required above-the-fold, lazy-loaded.
 
 The time it takes the browser to fetch resources like images or videos can also have an effect on LCP:

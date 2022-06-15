@@ -1,6 +1,6 @@
 <h2 id="nginx" class="anchor-heading">Nginx {% include Util/link_anchor anchor="nginx" %} {% include Util/top %}</h2>
 
-[Nginx](http://nginx.org/ "Nginx Web Server") is our preferred web server software at FutureLab. It has proven extremely stable, performant, and reliable at high scale and offers a powerful set of tools. This is not to imply there is anything wrong with using [Apache](https://httpd.apache.org/ "Apache Web Server") - we’ve worked on many high scale deployments that use Apache and mod_php that perform very well.  In general, we've found Nginx to be more lightweight, use less memory, provide more flexible configuration, and perform better under heavy load than Apache.  FutureLab maintains a public set of [Nginx configuration templates](https://github.com/FutureLab/nginx_configs "FutureLab Nginx Configuration Template for WordPress") that apply these best practices.
+[Nginx](http://nginx.org/ "Nginx Web Server") is our preferred web server software at FutureLab. It has proven extremely stable, performant, and reliable at high scale and offers a powerful set of tools. This is not to imply there is anything wrong with using [Apache](https://httpd.apache.org/ "Apache Web Server") - we’ve worked on many high scale deployments that use Apache and mod_php that perform very well.  In general, we've found Nginx to be more lightweight, use less memory, provide more flexible configuration, and perform better under heavy load than Apache.  FutureLab maintains a public set of [Nginx configuration templates](https://github.com/futurelabnz/nginx_configs "FutureLab Nginx Configuration Template for WordPress") that apply these best practices.
 
 ### Installation
 
@@ -18,19 +18,19 @@ Nginx does not have a history of security vulnerabilities, but keeping it at the
 
 Nginx has a number of modules that provide Web Application Firewall (WAF) style protection, but nearly all come with some significant trade-offs including the need to compile Nginx from source to install. [Naxsi](https://github.com/nbs-system/naxsi) and [modsecurity](https://www.trustwave.com/Resources/SpiderLabs-Blog/Announcing-the-availability-of-ModSecurity-extension-for-Nginx/) are 2 popular choices.
 
-Even without a security module compiled in, Nginx can be used to block some common exploit requests. The basic strategy is to know what kind of traffic you are expecting and would be legitimate, and block everything else. This way, a file snuck onto the server cannot be exploited. The [wordpress_security.inc](https://github.com/FutureLab/nginx_configs/blob/master/security/wordpress_security.inc) file in our Nginx template provides some examples of this.
+Even without a security module compiled in, Nginx can be used to block some common exploit requests. The basic strategy is to know what kind of traffic you are expecting and would be legitimate, and block everything else. This way, a file snuck onto the server cannot be exploited. The [wordpress_security.inc](https://github.com/futurelabnz/nginx_configs/blob/master/security/wordpress_security.inc) file in our Nginx template provides some examples of this.
 
-If you are certain a WordPress site is not using XML-RPC, block it in Nginx to prevent [brute force amplification attacks](https://blog.sucuri.net/2015/10/brute-force-amplification-attacks-against-wordpress-xmlrpc.html).  [Our Nginx template blocks XML-RPC](https://github.com/FutureLab/nginx_configs/blob/master/security/block_xmlrpc.inc) but allows for connections from Jetpack or whitelisted IP addresses.
+If you are certain a WordPress site is not using XML-RPC, block it in Nginx to prevent [brute force amplification attacks](https://blog.sucuri.net/2015/10/brute-force-amplification-attacks-against-wordpress-xmlrpc.html).  [Our Nginx template blocks XML-RPC](https://github.com/futurelabnz/nginx_configs/blob/master/security/block_xmlrpc.inc) but allows for connections from Jetpack or whitelisted IP addresses.
 
 ### Performance
 
 There are some basic settings that can be adjusted in Nginx to improve the performance of WordPress:
 
-* [Compress files with gzip](https://github.com/FutureLab/nginx_configs/blob/master/includes/performance.inc)
+* [Compress files with gzip](https://github.com/futurelabnz/nginx_configs/blob/master/includes/performance.inc)
 
-* Add [upstream response timing to the Nginx access logs](https://github.com/FutureLab/nginx_configs/blob/master/template/nginx.conf#L20) to monitor PHP performance and cache hit status
+* Add [upstream response timing to the Nginx access logs](https://github.com/futurelabnz/nginx_configs/blob/master/template/nginx.conf#L20) to monitor PHP performance and cache hit status
 
-* Set appropriate [expires headers for static assets](https://github.com/FutureLab/nginx_configs/blob/master/includes/expires.inc).  The expires header should be set to as far in the future as possible.  Keep in mind that a method to deal with cache invalidation at the CDN and in the browser cache should be utilized for assets (like css and js) that occasionally will change.
+* Set appropriate [expires headers for static assets](https://github.com/futurelabnz/nginx_configs/blob/master/includes/expires.inc).  The expires header should be set to as far in the future as possible.  Keep in mind that a method to deal with cache invalidation at the CDN and in the browser cache should be utilized for assets (like css and js) that occasionally will change.
 
 * Always enable [HTTP/2](https://en.wikipedia.org/wiki/HTTP/2) on SSL sites to take advantage of the improved header compression, pipelining, and multiplexing.  All major browsers support HTTP/2.
 
@@ -44,7 +44,7 @@ While a short microcaching time can be useful, the best practice is to set this 
 
 #### Implementation
 
-A handful of good [blog](https://thelastcicada.com/2014/microcaching-with-nginx-for-wordpress) posts cover microcaching and our Nginx templates provide the settings we commonly use with comments for context.  Microcaching needs configuration in a number of places, so be sure to include configuration in the [server block](https://github.com/FutureLab/nginx_configs/blob/master/includes/wp_microcaching.inc), the [http block](https://github.com/FutureLab/nginx_configs/blob/master/template/example.conf#L3), and in the [php location block](https://github.com/FutureLab/nginx_configs/blob/master/includes/php.inc).
+A handful of good [blog](https://thelastcicada.com/2014/microcaching-with-nginx-for-wordpress) posts cover microcaching and our Nginx templates provide the settings we commonly use with comments for context.  Microcaching needs configuration in a number of places, so be sure to include configuration in the [server block](https://github.com/futurelabnz/nginx_configs/blob/master/includes/wp_microcaching.inc), the [http block](https://github.com/futurelabnz/nginx_configs/blob/master/template/example.conf#L3), and in the [php location block](https://github.com/futurelabnz/nginx_configs/blob/master/includes/php.inc).
 
 <h2 id="php-fpm" class="anchor-heading">PHP-FPM {% include Util/link_anchor anchor="php-fpm" %} {% include Util/top %}</h2>
 
@@ -272,7 +272,7 @@ New sites should implement HTTPS (Hypertext Transfer Protocol Secure) unless the
 * **Non-HTTPS APIs** - Caution should be taken when sending sensitive information such as usernames or passwords to 3rd-party APIs not utilizing HTTPS. When sending data to a non-secure API, always be sure sensitive information is encrypted and decrypted on each end of the connection so that they are not exposed. Likewise, sensitive information, such as passwords, session tokens, etc should not be exposed in HTTP URL requests, which can be captured in web server logs.
 <h2 id="memcached-and-redis" class="anchor-heading">Memcached and Redis {% include Util/link_anchor anchor="memcached-and-redis" %} {% include Util/top %}</h2>
 
-Memcached and Redis are in memory data stores that are used for the WordPress object cache. Implementation of the object cache in WordPress code is covered extensively in the [PHP Performance](https://FutureLab.github.io/Engineering-Best-Practices/php/#performance) section of the Best Practices and this section will focus on the hosting and setup of memcached and Redis.
+Memcached and Redis are in memory data stores that are used for the WordPress object cache. Implementation of the object cache in WordPress code is covered extensively in the [PHP Performance](https://FutureLab.github.io/engineering-best-practices/php/#performance) section of the Best Practices and this section will focus on the hosting and setup of memcached and Redis.
 
 Memcached and Redis are used by WordPress as simple, in memory key-value stores. By being in memory and not having the possibility for complex queries, these tools provide blazing fast retrieval of data, usually in less than 1 millisecond. Common use cases of these data stores are:
 
@@ -437,7 +437,7 @@ Load balancing has become a comodity service, avaiable at the click of a button 
 
 If building a multiserver environment outside of the cloud providers, the following software load balancers are a good place to start:
 
-* [Nginx](hhttps://FutureLab.github.io/Engineering-Best-Practices/systems/#nginx) - fully featured web server and proxy with advanced capabilities
+* [Nginx](hhttps://FutureLab.github.io/engineering-best-practices/systems/#nginx) - fully featured web server and proxy with advanced capabilities
 * [HAProxy](http://www.haproxy.org/) - focused load balancer software with powerful options
 * [LVS](http://www.linuxvirtualserver.org/whatis.html) - Simple load balancing with very little overhead
 

@@ -1,13 +1,13 @@
-name:          10up Engineering Best Practices
-title:         10up Engineering Best Practices
-description:   Engineering best practices used by 10up.
-url:           https://10up.github.io/
-baseurl:       /Engineering-Best-Practices
+name:          FutureLab Engineering Best Practices
+title:         FutureLab Engineering Best Practices
+description:   Engineering best practices used by FutureLab.
+url:           https://futurelabnz.github.io/
+baseurl:       /engineering-best-practices
 author:
-  name:    10up
-  email:   sales@10up.com
-  github:  10up
-  twitter: 10up
+  name:    futurelabnz
+  email:   hello@futurelab.co.nz
+  github:  futurelabnz
+  twitter: futurelabnz
 
 markdown:      kramdown
 permalink:     pretty

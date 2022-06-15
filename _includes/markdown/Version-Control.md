@@ -2,7 +2,7 @@ We version control all projects at FutureLab using [Git](https://git-scm.com/). 
 
 <h2 id="structure-package-management" class="anchor-heading">Structure and Package Management {% include Util/link_anchor anchor="structure-package-management" %} {% include Util/top %}</h2>
 
-We structure our projects in such a way that we are not version controlling third party code, rather, they are included via a package manager. For PHP, we use [Composer](https://getcomposer.org/) to manage PHP dependencies (also see [package managers](/Engineering-Best-Practices/tools/#package-managers)) e.g. WordPress core itself, plugins, and themes. Dependency management structuring is explained more in the [Structure](https://FutureLab.github.io/Engineering-Best-Practices/structure/#composer-based-project-structure) section.
+We structure our projects in such a way that we are not version controlling third party code, rather, they are included via a package manager. For PHP, we use [Composer](https://getcomposer.org/) to manage PHP dependencies (also see [package managers](/engineering-best-practices/tools/#package-managers)) e.g. WordPress core itself, plugins, and themes. Dependency management structuring is explained more in the [Structure](https://FutureLab.github.io/engineering-best-practices/structure/#composer-based-project-structure) section.
 
 We also do not commit compiled files (JS/CSS). This saves us from having to deal with people forgetting to compile files and large merge conflicts. Instead, we generate compile files during deployment.
 

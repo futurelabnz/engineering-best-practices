@@ -8,7 +8,7 @@ At FutureLab, we use [Docker](https://www.docker.com/) to build and interact wit
 
 <h2 id="scaffolding" class="anchor-heading">Scaffolding {% include Util/link_anchor anchor="scaffolding" %} {% include Util/top %}</h2>
 
-[FutureLab WP Scaffold](https://github.com/FutureLab/wp-scaffold) - Developers can use FutureLab Project Scaffold to quickly create themes and plugins with our recommended tools and many of our best practices already in place.
+[FutureLab WP Scaffold](https://github.com/futurelabnz/wp-scaffold) - Developers can use FutureLab Project Scaffold to quickly create themes and plugins with our recommended tools and many of our best practices already in place.
 
 <h2 id="task-runners" class="anchor-heading">Task Runners {% include Util/link_anchor anchor="task-runners" %} {% include Util/top %}</h2>
 

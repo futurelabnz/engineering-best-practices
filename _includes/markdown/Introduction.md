@@ -26,4 +26,4 @@ We are constantly challenging ourselves and learning. Knowledge gives us a compe
 
 <h2 id="contributing" class="anchor-heading">Contributing {% include Util/link_anchor anchor="contributing" %} {% include Util/top %}</h2>
 
-Please contribute via [pull requests on GitHub](https://github.com/FutureLab/Engineering-Best-Practices).
+Please contribute via [pull requests on GitHub](https://github.com/futurelabnz/engineering-best-practices).

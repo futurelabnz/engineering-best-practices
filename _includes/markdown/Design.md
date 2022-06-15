@@ -138,7 +138,7 @@ Here's what `composer.json` might look like with some example plugins:
 
 <h2 id="integrations" class="anchor-heading">Third-Party Integrations {% include Util/link_anchor anchor="integrations" %}</h2>
 
-Any and all third-party integrations need to be documented in an `INTEGRATIONS.md` file at the root of the project repository. This file includes a list of third-party services, which components of the project those services power, how the project interacts with the remote APIs, and when the interaction is triggered. An integration that could result in unexpected consequences during something like a migration (such as sending out a tweet) should be clearly documented (see [Migrations](/Engineering-Best-Practices/migrations/) section).
+Any and all third-party integrations need to be documented in an `INTEGRATIONS.md` file at the root of the project repository. This file includes a list of third-party services, which components of the project those services power, how the project interacts with the remote APIs, and when the interaction is triggered. An integration that could result in unexpected consequences during something like a migration (such as sending out a tweet) should be clearly documented (see [Migrations](/engineering-best-practices/migrations/) section).
 
 For example:
 

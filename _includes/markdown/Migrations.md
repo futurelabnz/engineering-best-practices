@@ -155,7 +155,7 @@ function stop_the_insanity() {
 
 * __Make specific plans for content stored in the file system (i.e. site media).__
 
-	Media, like images, videos, or audio files typically take longer to migrate, as they have to be downloaded to the new site, and sometimes require more carefully considered content transformation (e.g. changing URLs in the content). If there is an unusually large volume of attached media to move, consider offloading processing using tools like [Gearman](https://github.com/FutureLab/WP-Gears) to process multiple files at once.
+	Media, like images, videos, or audio files typically take longer to migrate, as they have to be downloaded to the new site, and sometimes require more carefully considered content transformation (e.g. changing URLs in the content). If there is an unusually large volume of attached media to move, consider offloading processing using tools like [Gearman](https://github.com/futurelabnz/WP-Gears) to process multiple files at once.
 
 * __Doublecheck author metadata.__
 

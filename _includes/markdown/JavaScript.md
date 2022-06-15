@@ -1,6 +1,6 @@
 <h2 id="code-style" class="anchor-heading">Code Style, Tooling & Documentation {% include Util/link_anchor anchor="code-style" %} {% include Util/top %}</h2>
 
-FutureLab maintains a [eslint shareable config](https://github.com/FutureLab/eslint-config) that is used across all FutureLab projects. It exposes several different configs and engineers should opt-in to the config that best fits the project. We also maintain a [babel-preset](https://github.com/FutureLab/babel-preset-default/) that works well for most of our projects.
+FutureLab maintains a [eslint shareable config](https://github.com/futurelabnz/eslint-config) that is used across all FutureLab projects. It exposes several different configs and engineers should opt-in to the config that best fits the project. We also maintain a [babel-preset](https://github.com/futurelabnz/babel-preset-default/) that works well for most of our projects.
 
 As far as JavaScript documentation goes, we conform to the [WordPress JavaScript documentation standards](https://make.wordpress.org/core/handbook/best-practices/inline-documentation-standards/javascript/) and those standards are enforced by FutureLab's eslint config.
 
@@ -12,7 +12,7 @@ Standardizing the way we structure our JavaScript allows us to collaborate more 
 
 It's important we use language features that are intended to be used. This means not using deprecated functions, methods, or properties. Whether we are using plain JavaScript or a library, we should not use deprecated features. Using deprecated features can have negative effects on performance, security, maintainability, and compatibility.
 
-On all new projects you should be using up to date JavaScript methodologies combined with a build process tool like [Babel](https://babeljs.io/) to ensure browser compatibility. This allows us to utilize modern techniques while being certain our code will not break in older systems. The [FutureLab WP Scaffold](https://github.com/FutureLab/wp-scaffold) have this functionality built in.
+On all new projects you should be using up to date JavaScript methodologies combined with a build process tool like [Babel](https://babeljs.io/) to ensure browser compatibility. This allows us to utilize modern techniques while being certain our code will not break in older systems. The [FutureLab WP Scaffold](https://github.com/futurelabnz/wp-scaffold) have this functionality built in.
 
 Some older projects that have not yet been upgraded may not have the capability to use the most modern techniques, but it is still important to have processes in place that allow us to grow the technology stack as a project matures. In these cases, you should still follow best practice recommendations even if the newest patterns are not yet available to you.
 
@@ -312,7 +312,7 @@ Alternatively, you may consider adding a client-side sanitization library to you
 
 Writing performant code is absolutely critical. Poorly written JavaScript can significantly slow down and even crash the browser. On mobile devices, it can prematurely drain batteries and contribute to data overages. Performance at the browser level is a major part of user experience which is part of the FutureLab mission statement.
 
-We have a published [.eslint](https://www.npmjs.com/package/@FutureLab/eslint-config) configuration that's used on FutureLab projects. This linting is included in our [FutureLab WP Scaffold](https://github.com/FutureLab/wp-scaffold) and should help you adhere to our coding standards.
+We have a published [.eslint](https://www.npmjs.com/package/@FutureLab/eslint-config) configuration that's used on FutureLab projects. This linting is included in our [FutureLab WP Scaffold](https://github.com/futurelabnz/wp-scaffold) and should help you adhere to our coding standards.
 
 ### Only Load Libraries You Need
 

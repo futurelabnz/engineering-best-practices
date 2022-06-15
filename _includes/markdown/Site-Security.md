@@ -46,5 +46,5 @@ Where possible, keys should be stored either in the `wp_options` table, or as a 
 
 ## FutureLab Experience Plugin
 
-For improved security, FutureLab recommends our [FutureLab experience plugin](https://github.com/FutureLab/FutureLab-experience). FutureLab experience configures WordPress to better protect and inform our clients. [Please read the plugin readme for a description of the functionality.](https://github.com/FutureLab/FutureLab-experience#functionality)
+For improved security, FutureLab recommends our [FutureLab experience plugin](https://github.com/futurelabnz/FutureLab-experience). FutureLab experience configures WordPress to better protect and inform our clients. [Please read the plugin readme for a description of the functionality.](https://github.com/futurelabnz/FutureLab-experience#functionality)
 
