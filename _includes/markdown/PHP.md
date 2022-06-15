@@ -389,16 +389,16 @@ Generally, this means including a PHP ```namespace``` identifier at the top of i
 
 ```php
 <?php
-namespace TenUp\Buy_N_Large\Wall_E;
+namespace FL\Buy_N_Large\Wall_E;
 
 function do_something() {
   // ...
 }
 ```
 
-A namespace identifier consists of a _top-level_ namespace or "Vendor Name", which is usually ```TenUp``` for our projects. We follow the top-level name with a project name, usually a client's name. e.g. ```TenUp\Buy_N_Large;```
+A namespace identifier consists of a _top-level_ namespace or "Vendor Name", which is usually ```FL``` for our projects. We follow the top-level name with a project name, usually a client's name. e.g. ```FL\Buy_N_Large;```
 
-Additional levels of the namespace are defined at discretion of the project's lead engineers. Around the time of a project's kickoff, they agree on a strategy for namespacing the project's code. For example, the client's name may be followed with the name of a particular site or high-level project we're building (```TenUp\Buy_N_Large\Wall_E;```).
+Additional levels of the namespace are defined at discretion of the project's lead engineers. Around the time of a project's kickoff, they agree on a strategy for namespacing the project's code. For example, the client's name may be followed with the name of a particular site or high-level project we're building (```FL\Buy_N_Large\Wall_E;```).
 
 When FutureLab works on more than one project for a client and we build common plugins shared between sites, "Common" might be used in place of the project name to signal this code's relationship to the rest of the codebase.
 
@@ -411,18 +411,18 @@ The engineering leads document this strategy so it can be shared with engineers 
 /**
  * Example of a 'use' declaration
  */
-namespace TenUp\Buy_N_Large\Wall_E;
-use TenUp\Buy_N_Large\Common\TwitterAPI;
+namespace FL\Buy_N_Large\Wall_E;
+use FL\Buy_N_Large\Common\TwitterAPI;
 
 function do_something() {
   // Hard to read
-  $twitter_api = new TenUp\Buy_N_Large\Common\TwitterAPI();
+  $twitter_api = new FL\Buy_N_Large\Common\TwitterAPI();
   // Preferred
   $twitter_api = new TwitterAPI();
 }
 ```
 
-Anything declared in the global namespace, including a namespace itself, should be written in such a way as to ensure uniqueness. A namespace like ```TenUp``` is (most likely) unique; ```theme``` is not. A simple way to ensure uniqueness is to prefix a declaration with a unique prefix.
+Anything declared in the global namespace, including a namespace itself, should be written in such a way as to ensure uniqueness. A namespace like ```FL``` is (most likely) unique; ```theme``` is not. A simple way to ensure uniqueness is to prefix a declaration with a unique prefix.
 
 ### Object Design
 
