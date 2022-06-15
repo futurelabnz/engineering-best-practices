@@ -1,14 +1,14 @@
-The following are tools we use at 10up. This list will grow and change over time and is not meant to be comprehensive. Generally, we encourage or require these tools to be used in favor of other ones. Rules governing tools to be used and packaged with a client site will be much stricter than those used on internal projects.
+The following are tools we use at FutureLab. This list will grow and change over time and is not meant to be comprehensive. Generally, we encourage or require these tools to be used in favor of other ones. Rules governing tools to be used and packaged with a client site will be much stricter than those used on internal projects.
 
 <h2 id="local-development" class="anchor-heading">Local Development Environments {% include Util/link_anchor anchor="local-development" %} {% include Util/top %}</h2>
 
-At 10up, we use [Docker](https://www.docker.com/) to build and interact with virtual environments that match production as closely as possible. There are many setups and configurations available, but the following setup is supported internally:
+At FutureLab, we use [Docker](https://www.docker.com/) to build and interact with virtual environments that match production as closely as possible. There are many setups and configurations available, but the following setup is supported internally:
 
-* [WP Local Docker](https://10up.github.io/wp-local-docker-docs/) - An easy-to-use Docker-based local development environment for WordPress development that works on Mac, Windows, and Linux. Each environment within WP Local Docker is powered by Nginx, PHP-FPM, Memcached, and if desired, ElasticSearch.
+* [WP Local Docker](https://FutureLab.github.io/wp-local-docker-docs/) - An easy-to-use Docker-based local development environment for WordPress development that works on Mac, Windows, and Linux. Each environment within WP Local Docker is powered by Nginx, PHP-FPM, Memcached, and if desired, ElasticSearch.
 
 <h2 id="scaffolding" class="anchor-heading">Scaffolding {% include Util/link_anchor anchor="scaffolding" %} {% include Util/top %}</h2>
 
-[10up WP Scaffold](https://github.com/10up/wp-scaffold) - Developers can use 10up Project Scaffold to quickly create themes and plugins with our recommended tools and many of our best practices already in place.
+[FutureLab WP Scaffold](https://github.com/futurelabnz/wp-scaffold) - Developers can use FutureLab Project Scaffold to quickly create themes and plugins with our recommended tools and many of our best practices already in place.
 
 <h2 id="task-runners" class="anchor-heading">Task Runners {% include Util/link_anchor anchor="task-runners" %} {% include Util/top %}</h2>
 
@@ -26,13 +26,13 @@ When a WordPress install is managed and maintained by an engineering team, and w
 
 <h2 id="version-control" class="anchor-heading">Version Control {% include Util/link_anchor anchor="version-control" %} {% include Util/top %}</h2>
 
-[Git](https://git-scm.com) - At 10up we use Git for version control. We encourage people to use the command line for interacting with Git. GUIs are permitted but will not be supported internally.
+[Git](https://git-scm.com) - At FutureLab we use Git for version control. We encourage people to use the command line for interacting with Git. GUIs are permitted but will not be supported internally.
 
 [SVN](https://subversion.apache.org/) - We use SVN, but only in the context of WordPress.com VIP. Again, we encourage people to use the command line as we do not support GUIs internally.
 
 <h2 id="command-line" class="anchor-heading">Command Line Tools {% include Util/link_anchor anchor="command-line" %} {% include Util/top %}</h2>
 
-[WP-CLI](https://wp-cli.org) - A command line interface for WordPress. This is an extremely powerful tool that allows us to do imports, exports, run custom scripts, and more via the command line. Often this is the only way we can affect a large database (WordPress.com VIP or WP Engine). This tool is installed by default on [WP Local Docker](https://10up.github.io/wp-local-docker-docs/).
+[WP-CLI](https://wp-cli.org) - A command line interface for WordPress. This is an extremely powerful tool that allows us to do imports, exports, run custom scripts, and more via the command line. Often this is the only way we can affect a large database (WordPress.com VIP or WP Engine). This tool is installed by default on [WP Local Docker](https://FutureLab.github.io/wp-local-docker-docs/).
 
 <h2 id="a11y-testing" class="anchor-heading">Accessibility Testing {% include Util/link_anchor anchor="a11y-testing" %} {% include Util/top %}</h2>
 
